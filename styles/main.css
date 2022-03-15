@@ -1,0 +1,182 @@
+html {
+  background-color: #tan;
+  font-family: 'Arial';
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* Navigation */
+.navigation {
+  margin: 50px 0px 50px 0px;
+}
+
+.navigation a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.navigation a:active {
+  color: red;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+  color: #DAA520;
+}
+
+/* --- Home Page --- */
+/* Home Image */
+.homeImg {
+  width: 50%;
+  margin: px;
+  display: inline block;
+}
+
+/* Home About */
+.homeContainer {
+  padding-top: 25px;
+  padding-bottom: 70px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+
+.homeContainer span {
+  color: #DAA520;
+}
+
+.homeContainer h1 {
+  font-size: 40px;
+}
+
+/* Home Button */
+.homeBtn {
+  border: 1px solid gray;
+  padding: 5px 10px;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background: none;
+}
+
+.homeBtn:hover {
+  color: #DAA520;
+  border-color: #DAA520;
+}
+
+/* Services */
+.services {
+  display: inline-block;
+  margin: 30px 0px 100px 0px;
+}
+
+/* .services p, h4{
+	text-align:left;
+	line-height: 20%;
+} */
+/* --- About Page --- */
+.aboutBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 10rem;
+}
+
+/* About Image */
+.aboutImg {
+  width: 500px;
+}
+
+/* About Text */
+.aboutTxt {
+  line-height: 150%;
+  margin: 1rem 10rem;
+  text-align: left;
+}
+
+/* --- Portfolio Page --- */
+/* Portfolio Images */
+.portfolioImgs {
+  width: 80%;
+}
+
+.portfolioText {
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.portfolioText h3 {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.portfolioText h4 {
+  font-weight: 800;
+  font-size: larger;
+}
+
+/* --- Footer --- */
+/* Social Media Links */
+.connect {
+  padding-top: 10px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.connect a {
+  color: #DAA520;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.connect a:hover {
+  text-decoration: underline;
+}
+
+/* Built by me ;) */
+.footer {
+  text-align: center;
+  color: gray;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* --- Breakpoints --- */
+/*Flexbox on About Page*/
+@media only screen and (max-width: 1400px) {
+  .aboutBox {
+    flex-wrap: wrap;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 800px) {
+  .navigation a {
+    font-size: 1.5rem;
+  }
+
+  .aboutBox {
+    flex-wrap: wrap;
+    margin: 1rem 1rem;
+  }
+
+  .aboutTxt {
+    margin: 2rem 0;
+    text-align: left;
+    line-height: 150%;
+    font-size: 20px;
+  }
+
+  .portfolioImgs, .aboutImg, .homeImg {
+    width: 100%;
+  }
+}
