@@ -1,63 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-do List App</title>
 
-<head>
-  <title> Bryan Benattou </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/main.css">
-</head>
+    <!-- Roboto font embed -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 
-<body>
-  <!--  Navigation -->
-  <div class="navigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="portfolio.html">Projects</a>
-  </div>
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+  </head>
+  <body>
+    <header>
+      <input type="text" placeholder="Enter an activity.." id="item">
+      <button id="add">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve"><g><path class="fill" d="M16,8c0,0.5-0.5,1-1,1H9v6c0,0.5-0.5,1-1,1s-1-0.5-1-1V9H1C0.5,9,0,8.5,0,8s0.5-1,1-1h6V1c0-0.5,0.5-1,1-1s1,0.5,1,1v6h6C15.5,7,16,7.5,16,8z"/></g></svg>
+      </button>
+    </header>
 
-  <!--  Home -->
+    <div class="container">
+      <!-- Incomplete Tasks -->
+      <ul class="todo" id="todo"></ul>
 
-  <!--  Home About -->
-  <div class="homeContainer">
-    <img src="images/HomePage.jpg" class="homeImg">
-    <div class="homeBio">
-      <h1>I'm a
-        <span class="txt-rotate" data-period="1000" data-rotate='[ "surfer.", "producer.", "web designer."]'></span>
-      </h1>
-      <!--  Home About Button -->
-      <div>
-        <a href="about.html"><input type="button" class="homeBtn" value="About" /></a>
-        <a href="portfolio.html"><input type="button" class="homeBtn" value="Projects" /></a>
-      </div>
+      <!-- Completed Tasks -->
+      <ul class="todo" id="completed"></ul>
     </div>
-  </div>
 
-  <!--  Services
-    <div class= "services">
-      <h2> Services</h2>
-      <br />
-        <h4> UI/UX Design: </h4>
-          <p>Designing look, feel, and user experience of a site.</p>
-          <br />
-        <h4> Front-End Development:</h4>
-          <p>Hand-building beautiful, personalized websites using HTML, CSS, and Javascript.</p>
-          <br />
-        <h4> CMS Building & Maintenance:</h4>
-          <p>Creating and mainting Wordpress and Squarespace sites.</p>
-    </div>
-    -->
-
-  <!--  Connect -->
-  <div class="connect">
-    <a href="https://www.linkedin.com/in/bryan-benattou-7022b588/">LinkedIn</a>
-    <a href="mailto: bryanbenattou@gmail.com">Email</a>
-  </div>
-
-  <!--  Footer -->
-  <footer class="footer">
-    <p> Hand-made by me. 2022 </p>
-  </footer>
-  <script src="styles/script.js"></script>
-</body>
-
+    <!-- JavaScript file -->
+    <script src="styles/js/main.js"></script>
+  </body>
 </html>
