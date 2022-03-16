@@ -29,6 +29,12 @@ p {
   color: #DAA520;
 }
 
+a.link{
+  color: #DAA520;
+  font-size: 18px;
+  text-decoration: none;
+}
+
 /* --- Home Page --- */
 /* Home Image */
 .homeImg {
