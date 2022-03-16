@@ -123,12 +123,6 @@ p {
   font-size: larger;
 }
 
-.portfolioText p{
-  text-align: left;
-  position: relative;
-  left: 35%;
-}
-
 /* --- Footer --- */
 /* Social Media Links */
 
@@ -241,12 +235,18 @@ footer {
   .portfolioImgs, .aboutImg, .homeImg {
     width: 100%;
   }
+  
+  .portfolioText h3 {
+    width: 95%;
+    margin: 0 auto;
+  }
 
   .portfolioText p{
-    text-align: left;
-    position: relative;
-    left: 5%;
-    line-height: 1.5rem;
+    font-size: .9rem;
+  }
+
+  .scrollToTopBtn{
+    display: none;
   }
 
   footer{
