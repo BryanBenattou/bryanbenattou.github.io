@@ -1,3 +1,5 @@
+// Home page animation
+
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -50,9 +52,39 @@ window.onload = function() {
       new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
   }
+
   // INJECT CSS
   var css = document.createElement("style");
   css.type = "text/css";
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
+
+// scroll to top button
+
+const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+const rootElement = document.documentElement;
+
+function handleScroll() {
+  // Do something on scroll
+  var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+  if (rootElement.scrollTop / scrollTotal > 0.7) {
+    // Show button
+    scrollToTopBtn.classList.add("showBtn");
+  } else {
+    // Hide button
+    scrollToTopBtn.classList.remove("showBtn");
+  }
+}
+
+function scrollToTop() {
+  // Scroll to top logic
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
+document.addEventListener("scroll", handleScroll);
+  
+

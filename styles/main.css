@@ -1,5 +1,4 @@
 html {
-  background-color: #tan;
   font-family: 'Arial';
   text-align: center;
   scroll-behavior: smooth;
@@ -34,7 +33,6 @@ p {
 /* Home Image */
 .homeImg {
   width: 50%;
-  margin: px;
   display: inline block;
 }
 
@@ -57,7 +55,8 @@ p {
 /* Home Button */
 .homeBtn {
   border: 1px solid gray;
-  padding: 5px 10px;
+  border-radius: 20px;
+  padding: 7px 20px;
   margin: 20px;
   text-align: center;
   text-decoration: none;
@@ -86,7 +85,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5rem 10rem;
+  margin: 6rem 10rem;
 }
 
 /* About Image */
@@ -111,6 +110,7 @@ p {
   border-bottom: 1px solid gray;
   padding-bottom: 20px;
   text-align: center;
+  justify-content: center;
 }
 
 .portfolioText h3 {
@@ -123,19 +123,25 @@ p {
   font-size: larger;
 }
 
+.portfolioText p{
+  text-align: left;
+  position: relative;
+  left: 35%;
+}
+
 /* --- Footer --- */
 /* Social Media Links */
-.connect {
-  padding-top: 10px;
-  margin-top: 40px;
-  text-align: center;
+
+
+.connect{
+  margin-top: 2rem;
 }
 
 .connect a {
   color: #DAA520;
   font-size: 18px;
   text-decoration: none;
-  padding: 15px;
+  padding: 1.5rem;
 }
 
 .connect a:hover {
@@ -143,22 +149,80 @@ p {
 }
 
 /* Built by me ;) */
-.footer {
+footer {
   text-align: center;
   color: gray;
   font-size: 15px;
   font-style: italic;
+  padding: .5rem;
 }
 
+/*Scroll To Top Button*/
+
+.scrollToTopBtn {
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 48px;
+  width: 48px;
+
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* --- Breakpoints --- */
-/*Flexbox on About Page*/
+
+
+
+
+
+
+/*Big Daddy Screens*/
+@media only screen and (min-width: 1400px) {
+  
+  .homeImg {
+    width: 45%;
+  }
+
+  .portfolioImgs {
+    width: 70%;
+  }
+}
+
+/*Flexbox on About Page for mid sized screens*/
 @media only screen and (max-width: 1400px) {
   .aboutBox {
     flex-wrap: wrap;
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
+/*Ductape on portfolio list for mid sized screens*/
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
+  .portfolioText p{
+    left: 20%
+  }
+}
+
+
+/* Extra small devices (phones, 800px and down) */
 @media only screen and (max-width: 800px) {
   .navigation a {
     font-size: 1.5rem;
@@ -178,5 +242,16 @@ p {
 
   .portfolioImgs, .aboutImg, .homeImg {
     width: 100%;
+  }
+
+  .portfolioText p{
+    text-align: left;
+    position: relative;
+    left: 5%;
+    line-height: 1.5rem;
+  }
+
+  footer{
+    margin-top: 5rem;
   }
 }
