@@ -5,6 +5,10 @@ html {
   overflow-y: scroll; 
 }
 
+body {
+  margin: 0;
+}
+
 p {
   font-size: 16px;
 }
